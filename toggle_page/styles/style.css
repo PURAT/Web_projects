@@ -1,0 +1,93 @@
+@font-face {
+	font-family: "Arial AMU";
+	src: url(../fonts/19168.ttf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #303952;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkbox {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	-webkit-appearance: none;
+	width: 45px;
+	height: 22px;
+	background-color: #d2dae2;
+	border-radius: 20px;
+	cursor: pointer;
+	outline: none;
+}
+
+.checkbox:checked {
+	background-color: #1e272e;
+	transition: .15s linear;
+}
+
+.checkbox::before {
+	content: "";
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-color: #303952;
+	border-radius: 18px;
+	border: 2px solid #ffffff;
+	top: -2px;
+	left: 0px;
+	transition: .3s linear;
+}
+
+.checkbox:checked::before {
+	left: 22px;
+}
+
+.page-content {
+	width: 700px;
+	background-color: #d2dae2;
+	display: flex;
+}
+
+.page-content img {
+	height: 400px;
+	margin-right: 40px;
+}
+
+.page-content h1 {
+	font-family: "Arial AMU";
+	margin-top: 25px;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+
+.page-content p {
+	font-size: 18px;
+	margin-top: 30px;
+	margin-right: 25px;
+	text-indent: 1.5em;
+	text-align: justify;
+}
+
+.checkbox:checked + .page-content {
+	filter: brightness(50%);
+	transition: .2s linear;
+}
+
+.checkbox + .page-content {
+	transition: .2s linear;
+}
+
+
+
+
+
+
